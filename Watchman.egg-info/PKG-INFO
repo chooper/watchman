@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: Watchman
+Version: 0.1dev
+Summary: Framework to monitor a [generic] value and trigger actions based on that value.
+Home-page: UNKNOWN
+Author: Charles Hooper
+Author-email: chooper@plumata.com
+License: UNKNOWN
+Description: Edit
+Keywords: ZIP
+Platform: UNKNOWN

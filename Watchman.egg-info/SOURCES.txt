@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+Watchman.egg-info/PKG-INFO
+Watchman.egg-info/SOURCES.txt
+Watchman.egg-info/dependency_links.txt
+Watchman.egg-info/entry_points.txt
+Watchman.egg-info/not-zip-safe
+Watchman.egg-info/top_level.txt
+watchman/__init__.py
