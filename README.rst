@@ -12,6 +12,6 @@ whatever) and then register callbacks based on the results of that value.
 This is implemented through user/programmer-defined filter functions
 and user/programmer-defined callbacks.
 
-Context: Originally written for Loud3r, Inc. to automatically deploy new
-servers based on the size of a celery task queue.
+Context: Originally written to automatically deploy new EC2 instances 
+based on the size of a celery task queue.
 
