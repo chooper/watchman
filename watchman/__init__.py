@@ -2,6 +2,18 @@
 
 import time
 
+class HistoryBuffer(list):
+    """Just a simple implementation of a capped list"""
+    def __init__(self, size):
+        self.size = size
+        list.__init__(self)
+
+    def append(self, item):
+        list.append(self,item)
+        if len(self) > self.size:
+            del self[0]
+
+
 class Watchman(object):
     """Take measurements and trigger callbacks based on whether
     filter functions return True or not.
@@ -27,12 +39,13 @@ class Watchman(object):
     _collector = None
     frequency = 300
     callbacks = []
-    history = []
+    history = HistoryBuffer(0)
     end_on_match = False
 
-    def __init__(self, collector, frequency=300, end_on_match=False):
+    def __init__(self, collector, frequency=300, hist_size=10, end_on_match=False):
         self._collector = collector
         self.frequency = frequency
+        self.history = HistoryBuffer(hist_size)
         self.end_on_match = end_on_match
 
     def register_callback(self, filter_func, callback):
